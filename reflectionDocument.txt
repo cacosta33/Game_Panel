@@ -1,0 +1,37 @@
+1.)Names: Cesar Acosta and Chen Chen
+2.)Class: CSCI 1302
+3.)Cesar Acosta's ID: 810-359-2250
+   Chen Chen's ID: 810-304-9140
+4.)Date: 4/8/14
+
+REFLECTION DOCUMENT:
+	Througout the coding of this project, we made several adjustments to 
+accomodate the programs functionality that we couldn't have predicted at the
+beginning. We began to conceptualize the concept of Tic Tac Toe and Tetris first
+and we broke it down into digestable chunks, chunks that aren't too overwhelming
+at first and that could be pieced together once we completely grasped the concept.
+Both projects were broken up into stages and the benefit of the GUI is that we 
+were clearly able to view these changes as we progressed.
+	For Tic Tac Toe, we created an inner class called Cell and
+we created 3x3 cells to use as the board in the outer class. To represent 
+each player we used the symbol X and O. We used an integers (1 and 2) to 
+indicate whose turn it is. Most Listener were added to each individual cell.
+Once the mouse is pressed, we draw either an X or an O. To decide who wins,
+we iterate the gameboard to check if the player wins vertically, horizontally,
+or diagonally respectively. Two integers were used to track the score for each
+player. For the undo button, we used a stack to record each move and in the undo
+method the stack was used to "pop" the player's last move. The undo method is called
+by the button's Action Listener and Control-Z Key Listener.
+	For Tetris, in the Single Piece class, we called the shape of each piece
+its "status". Each piece is represented by a 4x4 grid. We store each status of
+each shape in a 3-dimensional array as a constant. This is so that we can store
+all the shapes as an indexed value in the array. In the Piece Generator class,
+we randomly created 200 single pieces and stored them in a queue. We "dequeued"
+this queue to bring out each new piece to the board. We designed the board as a
+10x20 grid, in the same way as the pieces (with 0's and 1's). We used the constant
+9 to represent the wall. We defined all the methods for the moves as "rotate", "left",
+"right", and "down". The timer periodically calls "down" with a 1 second interval.
+We finally designed the method to clear the board once a row has been completely filled
+and it will update the score.
+	We used a Card Layout as the main panel to choose between games. We used buttons to 
+control options for tetris.
